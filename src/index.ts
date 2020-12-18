@@ -13,7 +13,12 @@ export default function JwtGuard(
 
   // eslint-disable-next-line
   descriptor.value = function (...args: any[]) {
-    const [context] = args;
+    const context = args.find((arg) => arg instanceof ServiceContext);
+
+    if (!context) {
+      throw new Errors.InternalServerError('No context provided.');
+    }
+
     const accessToken = (context as ServiceContext).request.cookies['BEARER'];
 
     if (!accessToken) {
