@@ -37,3 +37,4 @@ export default class HealthController {
   }
 }
 ```
+Note that the first argument of wrapped method must be context of type ServiceContext.
