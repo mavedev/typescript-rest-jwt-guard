@@ -16,7 +16,7 @@ export default function JwtGuard(
     const accessToken = context.request.cookies['BEARER'];
 
     if (!accessToken) {
-      throw new Errors.UnauthorizedError('No access token provided');
+      throw new Errors.UnauthorizedError('No access token provided.');
     }
 
     try {
