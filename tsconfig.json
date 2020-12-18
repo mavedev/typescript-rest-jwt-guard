@@ -14,7 +14,7 @@
     "noImplicitAny": true, /* Warn on expressions and declarations with an implied 'any' type. */
     "skipLibCheck": true, /* Skip type checking of declaration files. */
     "module": "commonjs", /* Module code generation. */
-    "outDir": "dist", /* Redirect output structure to the directory. */
+    "outDir": "./lib", /* Redirect output structure to the directory. */
     "sourceMap": true, /* Generates corresponding '.map' file. */
     "declaration": true, /* Generates corresponding d.ts files. */
     "declarationMap": true, /* Generates a sourcemap for each corresponding '.d.ts' file. */
