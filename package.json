@@ -1,6 +1,6 @@
 {
   "name": "typescript-rest-jwt-guard",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JWT-checking decorator for typescript-rest",
   "main": "lib/index.js",
   "scripts": {
