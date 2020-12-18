@@ -12,8 +12,9 @@ export default function JwtGuard(
   const original = descriptor.value;
 
   // eslint-disable-next-line
-  descriptor.value = function (context: ServiceContext, ...args: any[]) {
-    const accessToken = context.request.cookies['BEARER'];
+  descriptor.value = function (...args: any[]) {
+    const [context] = args;
+    const accessToken = (context as ServiceContext).request.cookies['BEARER'];
 
     if (!accessToken) {
       throw new Errors.UnauthorizedError('No access token provided.');
