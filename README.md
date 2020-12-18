@@ -9,7 +9,12 @@ Or using yarn:
 $ yarn add typescript-rest-jwt-guard
 ```
 ## Usage
-```tsx
+First, you must provide [cookie parser](https://github.com/expressjs/cookie-parser#readme):
+```ts
+app.use(cookieParser());
+```
+Now you can use the decorator in your methods:
+```ts
 import { Path, GET, Context, ServiceContext } from 'typescript-rest';
 import { Inject } from 'typescript-ioc';
 import JwtGuard from 'typescript-rest-jwt-guard';
