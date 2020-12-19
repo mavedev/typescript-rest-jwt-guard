@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 /**
  * Get token name and value from string.
  *
- * @param str String to retrieve values from.
+ * @param {string} str String to retrieve values from.
  */
 function retrievePair(str: string): string[] {
   return str.trim().replace(/\s+/g, ' ').split(' ');
@@ -13,9 +13,9 @@ function retrievePair(str: string): string[] {
 /**
  * Check if the request context is provided.
  *
- * @param context Request context
+ * @param {object|undefined} context Request context
  */
-function checkContext(context: ServiceContext | undefined): void {
+function checkContext(context?: object): void {
   if (!context) {
     throw new Errors.InternalServerError(
       'No context provided.'

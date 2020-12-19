@@ -1,0 +1,43 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Demo API with typescript-rest-jwt-guard",
+  "scripts": {
+    "dev": "swaggerGen -c ./swagger.config.yml -t && env-cmd -e dev tsc-watch --onSuccess \"node dist\"",
+    "build": "env-cmd -e prod tsc",
+    "start": "node dist"
+  },
+  "keywords": [],
+  "author": "Cirill Usachov",
+  "license": "MIT",
+  "_moduleAliases": {
+    "@application": "dist/application",
+    "@common": "dist/common",
+    "@controllers": "dist/controllers",
+    "@services": "dist/services",
+    "@types": "dist/types",
+    "@utils": "dist/utils"
+  },
+  "devDependencies": {
+    "@types/cors": "2.8.9",
+    "@types/morgan": "1.9.2",
+    "env-cmd": "10.1.0",
+    "eslint": "7.15.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-import-resolver-typescript": "2.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "morgan": "1.10.0",
+    "tsc-watch": "4.2.9",
+    "typescript": "3.7.5",
+    "typescript-rest-swagger": "1.1.5"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "module-alias": "2.2.2",
+    "source-map-support": "0.5.19",
+    "typescript-ioc": "3.2.2",
+    "typescript-rest": "3.0.2",
+    "typescript-rest-ioc": "1.0.0"
+  }
+}

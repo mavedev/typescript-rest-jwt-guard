@@ -1,0 +1,9 @@
+swagger:
+  outputDirectory: ./dist
+  entryFile:
+    - ./src/controllers/*
+  outputFormat: OpenApi_3
+  name: Demo
+  description: Demo API
+  produces: [application/json]
+  version: 1.0.0

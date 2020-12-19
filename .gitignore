@@ -12,7 +12,6 @@
 # Production and demo.
 /dist
 /lib
-/demo
 
 # Misc.
 .DS_Store
