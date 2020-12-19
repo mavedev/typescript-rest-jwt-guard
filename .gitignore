@@ -12,7 +12,7 @@
 # Production and demo.
 /dist
 /lib
-/demo/build
+/demo
 
 # Misc.
 .DS_Store

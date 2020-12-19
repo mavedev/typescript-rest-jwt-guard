@@ -21,4 +21,7 @@
     "allowJs": true, /* Allow javascript files to be compiled. */
     "strict": true, /* Enable all strict type-checking options. */
   },
+  "exclude": [
+    "./demo/**/*.ts"
+  ]
 }
