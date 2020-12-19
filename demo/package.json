@@ -38,6 +38,7 @@
     "source-map-support": "0.5.19",
     "typescript-ioc": "3.2.2",
     "typescript-rest": "3.0.2",
-    "typescript-rest-ioc": "1.0.0"
+    "typescript-rest-ioc": "1.0.0",
+    "typescript-rest-jwt-guard": "^1.1.0"
   }
 }

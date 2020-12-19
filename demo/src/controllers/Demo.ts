@@ -1,10 +1,9 @@
 import { Path, GET, Context, ServiceContext } from 'typescript-rest';
+import { JwtCookieGuard, JwtHeaderGuard, JwtBodyGuard } from 'typescript-rest-jwt-guard';
 import { Inject } from 'typescript-ioc';
 
 import Types from '@types';
 import DemoService from '@services/Demo';
-
-import { JwtCookieGuard, JwtHeaderGuard, JwtBodyGuard } from '../../../lib';
 
 /**
  * Default controller in charge of checking the API.

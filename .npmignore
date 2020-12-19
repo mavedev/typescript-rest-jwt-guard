@@ -1,2 +1,6 @@
 /demo
 /src
+/.editorconfig
+/.eslintignore
+/.eslintrc.*
+/tsconfig.json

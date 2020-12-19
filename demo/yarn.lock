@@ -2425,6 +2425,11 @@ typescript-rest-ioc@1.0.0:
   dependencies:
     lodash "^4.17.15"
 
+typescript-rest-jwt-guard@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/typescript-rest-jwt-guard/-/typescript-rest-jwt-guard-1.1.0.tgz#8f793aa70044c3d06091b1dd071ffa8ea2ac255f"
+  integrity sha512-9Cvlk3zzbc+zPW14XiM4ZPsNG25pi58y6/mIMD8lJJChky4CEcwNJD4j9gtqtU6k9WA/h1cwIIMQmaVCHWOPoA==
+
 typescript-rest-swagger@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/typescript-rest-swagger/-/typescript-rest-swagger-1.1.5.tgz#7c2449ca58c730b591de2da077bab49dc03e1c49"
