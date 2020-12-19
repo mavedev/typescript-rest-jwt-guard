@@ -18,6 +18,7 @@ public myMethod(@Context _context: ServiceContext) {
   return { message: 'Ok' };
 }
 ```
+You must also ensure that process.env.JWT_SECRET environment variable contains JWT secret.
 ## Usage with cookies
 If access token is supposed to be passed with cookies, you must provide [cookie parser](https://github.com/expressjs/cookie-parser#readme):
 ```ts

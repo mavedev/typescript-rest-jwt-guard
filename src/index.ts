@@ -27,7 +27,7 @@ function checkContext(context?: object): void {
  * Check if JWT secret is defined.
  */
 function checkSecret(): void {
-  if (!process.env.SECRET) {
+  if (!process.env.JWT_SECRET) {
     throw new Errors.InternalServerError(
       'Token secret not provided at server.'
     );
@@ -63,7 +63,7 @@ export function JwtCookieGuard(tokenName: string) {
       checkSecret();
 
       try {
-        jwt.verify(accessToken, process.env.SECRET as string);
+        jwt.verify(accessToken, process.env.JWT_SECRET as string);
       } catch (error) {
         throw new Errors.ForbiddenError(
           'Invalid or expired JWT provided.'
@@ -118,7 +118,7 @@ export function JwtHeaderGuard(tokenName: string) {
       checkSecret();
 
       try {
-        jwt.verify(token, process.env.SECRET as string);
+        jwt.verify(token, process.env.JWT_SECRET as string);
       } catch (error) {
         throw new Errors.ForbiddenError(
           'Invalid or expired JWT provided.'
@@ -159,7 +159,7 @@ export function JwtBodyGuard(tokenKey: string) {
       checkSecret();
 
       try {
-        jwt.verify(body[tokenKey], process.env.SECRET as string);
+        jwt.verify(body[tokenKey], process.env.JWT_SECRET as string);
       } catch (error) {
         throw new Errors.ForbiddenError(
           'Invalid or expired JWT provided.'
