@@ -1,5 +1,5 @@
 # JwtGuard for typescript-rest
-JwtGuard is a library to use in conjunction with [typescript-rest](https://github.com/thiagobustamante/typescript-rest#readme). The library provides a set of decorators to use them with controllers' methods. The purpose of the decorators in JWT access tokens availability control. There are several decorators depending on what token is supposed to be passed with.
+JwtGuard is a library to use in conjunction with [typescript-rest](https://github.com/thiagobustamante/typescript-rest#readme). The library provides a set of decorators to use them with controllers' methods. The purpose of the decorators is JWT access tokens availability control. There are several decorators depending on what token is supposed to be passed with.
 ## Installation
 Using npm:
 ```shell
@@ -8,6 +8,15 @@ $ npm i typescript-rest-jwt-guard
 Or using yarn:
 ```shell
 $ yarn add typescript-rest-jwt-guard
+```
+## Preconditions
+As soon as the decorators retrieve tokens from request context, you have to provide context as dependency injection to your wrapped methods:
+```ts
+@JwtCookieGuard('BEARER')
+@GET
+public myMethod(@Context _context: ServiceContext) {
+    return { message: 'Ok' };
+  }
 ```
 ## Usage with cookies
 If access token is supposed to be passed with cookies, you must provide [cookie parser](https://github.com/expressjs/cookie-parser#readme):
@@ -33,7 +42,7 @@ export default class DemoController {
 ```
 Now requests to that route must provide a cookie with name BEARER and the JWT token as its value.
 ## Usage with authorization header
-If access token is supposed to be passed with authorization header, you can use like this:
+If access token is supposed to be passed with authorization header, you can use JwtHeaderGuard like this:
 ```ts
 import { Path, GET, Context, ServiceContext } from 'typescript-rest';
 import { Inject } from 'typescript-ioc';
