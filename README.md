@@ -15,8 +15,8 @@ As soon as the decorators retrieve tokens from request context, you have to prov
 @JwtCookieGuard('BEARER')
 @GET
 public myMethod(@Context _context: ServiceContext) {
-    return { message: 'Ok' };
-  }
+  return { message: 'Ok' };
+}
 ```
 ## Usage with cookies
 If access token is supposed to be passed with cookies, you must provide [cookie parser](https://github.com/expressjs/cookie-parser#readme):
@@ -82,4 +82,5 @@ export default class DemoController {
   }
 }
 ```
-Now requests to that route must provide accessToken key inside their bodies with the JWT token as value.
+Now requests to that route must provide accessToken key inside their bodies with the JWT token as value.<br><br>
+Also you can take a look at [demo](https://github.com/mavedev/typescript-rest-jwt-guard/tree/master/demo).
