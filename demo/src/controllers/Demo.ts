@@ -1,4 +1,4 @@
-import { Path, GET, Context, ServiceContext } from 'typescript-rest';
+import { Path, GET, POST, Context, ServiceContext } from 'typescript-rest';
 import { JwtCookieGuard, JwtHeaderGuard, JwtBodyGuard } from 'typescript-rest-jwt-guard';
 import { Inject } from 'typescript-ioc';
 
@@ -45,7 +45,7 @@ export default class DemoController {
    */
   @JwtBodyGuard('accessToken')
   @Path('/body-jwt')
-  @GET
+  @POST
   public getDemoReplyBody(@Context _context: ServiceContext): Types.HealthResponseDTO {
     return this.injectedService.getHealthStatus();
   }
